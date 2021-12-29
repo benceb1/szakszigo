@@ -79,4 +79,16 @@ export function beilleszteses(x, n) { // x: tomb, n: egesz
 }
 
 // JAVITOTT BEILLESZTESES
+// kulonbseg: itt cserelgetes helyett eloszor kivesszuk az aktualis elemet, a nagyobb elemeket hatratologatjuk, mikor elertunk a megfelelo helyhez, beillesztjuk
+export function javitottBeilleszteses(x, n) { // x: tomb, n: egesz
+    for (let i = 1; i < n; i++) {
+        let j = i - 1;
+        let seged = x[i];
+        while ((j >= 0) && x[j] > x[j+1]) {
+            x[j + 1] = x[j]
+            j--;
+        }
+        x[j+1] = seged;
+    }
+}
 

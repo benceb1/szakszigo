@@ -3,6 +3,18 @@
 
 // maximumkiválasztás,
 
+//sorozatszamitas algoritmus
+export function sorozatszamitas(x, n) {
+    let ertek = 0;
+    for (let i = 0; i < n; i++) {
+        ertek += x[i]
+    }
+    return ertek;
+}
+
+
+
+
 // kimenet: max elem indexe
 export function maxKivalaszt(x, bal, jobb) {
     if (bal === jobb) {

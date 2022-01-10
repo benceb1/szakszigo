@@ -79,3 +79,45 @@ export function szetvalogatasOsszetett(x, n, P) {
     }
     return db;
 }
+
+export function maximum_kivalogatas(x, n) {
+    let y = new Array(n);
+    let maxErtek = x[0];
+    let db = 0;
+    y[db] = 0;
+    for (let i = 1; i < n; i++) {
+        if (x[i] > maxErtek) {
+            maxErtek = x[i]
+            db = 0;
+            y[db] = i;
+        } else if (x[i] === maxErtek) {
+            db = db + 1;
+            y[db] = i;
+        }
+    }
+    return y;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
